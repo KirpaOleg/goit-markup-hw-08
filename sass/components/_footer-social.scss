@@ -1,0 +1,24 @@
+.socialblock {
+
+  &__items {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__link {
+    @include centerFlex;
+    width: 44px;
+    height: 44px;
+    background-color: getColor('footer-social-background-color');
+    border-radius: 50%;
+    transition: background-color 250ms $prymary-time-func;
+
+    &:hover, &:focus {
+      background-color: getColor('accent-color');
+    }
+  }
+
+  &__icon {
+    fill: getColor('white-text-color');
+  }
+}

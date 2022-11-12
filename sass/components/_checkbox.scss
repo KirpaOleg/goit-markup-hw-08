@@ -1,0 +1,38 @@
+.checkbox {
+
+  &__label {
+    position: relative;
+    @include centerFlex;
+    cursor: pointer;
+  }
+
+  &__input {
+    appearance: none;
+
+    &:checked+.checkbox__icon {
+      background-color: getColor('accent-color');
+      border-color: transparent;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 13px;
+    width: 16px;
+    height: 15px;
+    background-color: transparent;
+    background-size: contain;
+    background-origin: border-box;
+    border: 2px solid getColor('secondary-text-color');
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color 250ms $prymary-time-func;
+  }
+
+  &__contract {
+    margin-left: 5px;
+    color: getColor('accent-color');
+    text-decoration: underline;
+  }
+}

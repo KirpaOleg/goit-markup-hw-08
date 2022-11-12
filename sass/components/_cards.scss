@@ -1,0 +1,73 @@
+.card {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__list {
+    flex-basis: calc((100% - 60px) / 3);
+    border: 1px solid getColor('card-border');
+
+    &:hover, &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__title {
+    padding: 20px 24px;
+  }
+
+  &__name {
+    color: getColor('secondary-text-color');
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+  }
+
+  &__focus {
+    display: block;
+  }
+
+  &__block {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.overley {
+
+  &:hover, &:focus {
+
+    .overley__box {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  &__box {
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    top: 0;
+    left: 0;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    padding: 63px 24px;
+    color: getColor('white-text-color');
+    background-color: getColor('overley-background-color');
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms $prymary-time-func,
+      opacity 250ms $prymary-time-func;
+  }
+}

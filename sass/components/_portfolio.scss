@@ -1,0 +1,33 @@
+.portfolio {
+
+  &__filter {
+    @include centerFlex;
+    gap: 8px;
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 6px 22px;
+    border-radius: 4px;
+    transition: color 250ms $prymary-time-func,
+      background-color 250ms $prymary-time-func,
+      box-shadow 250ms $prymary-time-func;
+
+    &:hover, &:focus {
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+      color: getColor('white-text-color');
+      background-color: getColor('accent-color');
+      border-radius: 4px;
+    }
+  }
+}
+

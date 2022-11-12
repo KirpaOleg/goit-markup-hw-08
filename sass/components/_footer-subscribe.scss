@@ -1,0 +1,37 @@
+.subscribe {
+
+  &__form {
+    @include centerRowFlex ($type: inline-flex);
+  }
+
+  &__input {
+    min-width: 358px;
+    color: getColor('footer-input-color');
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    background-color: transparent;
+    border: 1px solid getColor('footer-input-border');
+    border-radius: 4px;
+    padding: 15px 16px;
+  }
+
+  &__btn-send {
+    @include centerFlex ($type: inline-flex);
+    margin-left: 12px;
+    min-width: 200px;
+    @extend %button;
+    letter-spacing: 0.06em;
+    padding: 10px 28px;
+  
+    &:hover, &:focus {
+      background-color: getColor('button-active-color');
+    }
+  }
+
+  &__icon {
+    fill: getColor('modal-background-color');
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,44 @@
+body {
+  font-family: $font;
+  color: getColor('primary-text-color');
+  font-size: $primary-size;
+  font-weight: $primary-weight;
+}
+
+;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  @extend %reset-indent
+}
+
+img {
+  @extend %img
+}
+
+.container {
+  @extend %container
+}
+
+.section {
+  padding-top: $primary-indent;
+  padding-bottom: $primary-indent;
+}
+
+.list {
+  @extend %list
+}
+
+.link {
+  @extend %link
+}
+
+.visually-hidden {
+  @extend %not-visible
+}

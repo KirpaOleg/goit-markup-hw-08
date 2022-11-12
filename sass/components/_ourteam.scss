@@ -1,0 +1,71 @@
+.ourteam {
+  background-color: getColor('secondary-background-color');
+
+  &__title {
+    @extend %title
+  }
+}
+
+.team {
+  display: flex;
+  column-gap: 30px;
+
+  &__card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+    
+    .team__title {
+      background-color: getColor('white-text-color');
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__name {
+    color: getColor('secondary-text-color');
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
+  &__job {
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  }
+
+  &__socials {
+    @include centerFlex;
+    gap: 10px;
+  }
+}
+
+
+.social {
+  &__link {
+    @include centerFlex;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    color: getColor('client-logo-color');
+    transition: color 250ms $prymary-time-func,
+      background-color 250ms $prymary-time-func;
+
+    &:hover, &:focus {
+      background-color: getColor('accent-color');
+      color: getColor('white-text-color');
+    }
+  }     
+  &__link {
+    fill: currentColor;
+  }
+}
+
+
+
+

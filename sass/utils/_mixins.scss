@@ -1,0 +1,16 @@
+@mixin centerFlex ($type: flex, $justify-content: center, $align-items: center) {
+  display: $type;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin centerRowFlex ($type: flex, $justify-content: center) {
+  display: $type;
+  justify-content: $justify-content;
+}
+
+@mixin centerColumnFlex ($type: flex, $align-items: center) {
+  display: $type;
+  align-items: $align-items;
+}
+

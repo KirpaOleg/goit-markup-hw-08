@@ -1,0 +1,29 @@
+.clients {
+  
+  &__title {
+    @extend %title
+  }
+
+  &__list {
+    @include centerRowFlex;
+    gap: 30px;
+  }
+
+  &__link {
+    @include centerFlex;
+    fill: getColor('client-logo-color');
+    width: 170px;
+    height: 92px;
+    cursor: pointer;
+    border: 1px solid getColor('client-logo-color');
+    border-radius: 4px;
+    transition: fill 250ms $prymary-time-func,
+      border-color 250ms $prymary-time-func;
+
+    &:hover, &:focus {
+      fill: getColor('accent-color');
+      border-color: getColor('accent-color');
+    }
+}
+
+}

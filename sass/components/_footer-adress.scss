@@ -1,0 +1,31 @@
+.adressblok {
+  font-style: normal;
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__contact {
+    color: getColor('footer-adress-color');
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    transition: color 250ms $prymary-time-func;
+    
+    &:hover, &:focus {
+    color: getColor('accent-color');
+    }
+  }
+
+  &__adress {
+    color: getColor('white-text-color');
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    transition: color 250ms $prymary-time-func;
+
+    &:hover, &:focus {
+      color: getColor('accent-color');
+    }
+  }
+}

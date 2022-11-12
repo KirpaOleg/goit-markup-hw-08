@@ -1,0 +1,16 @@
+.header__logo {
+  color: getColor('black-logo-color');
+  @extend %logo;
+  margin-right: 93px;
+}
+
+.logo-accent {
+  color: getColor('accent-color');
+}
+
+.footer__logo {
+  color: getColor('white-logo-color');
+  @extend %logo;
+  display: inline-block;
+  margin-bottom: 20px;
+}

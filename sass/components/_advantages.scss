@@ -1,0 +1,32 @@
+.advantages {
+
+  &__boxicon {
+    @include centerFlex;
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: getColor('secondary-background-color');
+    border-radius: 4px;
+  }
+
+  &__items {
+    @include centerRowFlex ($justify-content: space-between);
+  }
+
+  &__item {
+    width: 270px;
+  }
+
+  &__title {
+    color: getColor('secondary-text-color');
+    font-weight: 700;
+    font-size: inherit;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    line-height: 1.71;
+  }
+}
