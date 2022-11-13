@@ -5,15 +5,32 @@
     margin-bottom: 30px;
     height: 120px;
     background-color: getColor('secondary-background-color');
-    border-radius: 4px;
+    border-radius: 4px; 
   }
 
   &__items {
-    @include centerRowFlex ($justify-content: space-between);
+    gap: 30px;
+    
+    @include for-tablet {
+        @include wrapFlex;
+    }
+
+    @include for-desktop {
+      @include centerRowFlex ($justify-content: space-between);
+    }
+    
   }
 
   &__item {
-    width: 270px;
+    width: 100%;
+
+    @include for-tablet {
+      width: calc((100% - 30px)/2);
+    }
+
+    @include for-desktop {
+        width: calc((100% - 90px)/4);
+      }
   }
 
   &__title {
@@ -28,5 +45,13 @@
 
   &__text {
     line-height: 1.71;
+    
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include for-desktop {
+      margin-bottom: 0px;
+    }
   }
 }

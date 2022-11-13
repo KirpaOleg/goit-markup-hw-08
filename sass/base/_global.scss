@@ -15,30 +15,45 @@ h5,
 h6,
 p,
 ul {
-  @extend %reset-indent
+  @include reset-indent
 }
 
 img {
-  @extend %img
+  @include img
 }
 
 .container {
-  @extend %container
+  @include container; 
+
+    @include for-phone {
+      width: 480px;
+    }
+    @include for-tablet {
+      width: 780px;
+    }
+    @include for-desktop {
+      width: 1200px;
+    }
 }
 
 .section {
-  padding-top: $primary-indent;
-  padding-bottom: $primary-indent;
+  padding-top: $secondary-indent;
+  padding-bottom: $secondary-indent;
+
+    @include for-desktop {
+      padding-top: $primary-indent;
+      padding-bottom: $primary-indent;
+    }
 }
 
 .list {
-  @extend %list
+  @include list
 }
 
 .link {
-  @extend %link
+  @include link
 }
 
 .visually-hidden {
-  @extend %not-visible
+  @include not-visible
 }

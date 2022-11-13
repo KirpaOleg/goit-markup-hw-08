@@ -1,7 +1,15 @@
 .header__logo {
   color: getColor('black-logo-color');
-  @extend %logo;
-  margin-right: 93px;
+  @include logo;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include for-tablet {
+    margin-right: 88px;
+  }
+  @include for-desktop {
+    margin-right: 93px;
+  }
 }
 
 .logo-accent {
@@ -10,7 +18,7 @@
 
 .footer__logo {
   color: getColor('white-logo-color');
-  @extend %logo;
+  @include logo;
   display: inline-block;
   margin-bottom: 20px;
 }

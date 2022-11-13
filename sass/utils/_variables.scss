@@ -12,7 +12,7 @@ $colors: (
   'footer-background-color': #2f303a,
   'modal-background-color': #ffffff,
   'overley-background-color': rgba(33, 150, 243, 0.9),
-  'footer-social-background-color' rgba(255, 255, 255, 0.1),
+  'footer-social-background-color': rgba(255, 255, 255, 0.1),
   'services-img-background-color': rgba(47, 48, 58, 0.8),
   'backdrop-background-color': rgba(0, 0, 0, 0.2),
 
@@ -27,6 +27,8 @@ $colors: (
   'footer-input-border': rgba(255, 255, 255, 0.3),
   'modal-close-border': rgba(0, 0, 0, 0.1),
   'modal-input-border': rgba(33, 33, 33, 0.2),
+
+  'mobile-separator': rgba(33, 33, 33, 0.2),
   
 );
 
@@ -38,6 +40,7 @@ $colors: (
   $time-animation: 250ms;
 
   $primary-indent: 94px;
+  $secondary-indent: 60px;
   $font: Roboto, sans-serif;
   $primary-size: 14px;
   $primary-weight: 400;

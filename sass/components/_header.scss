@@ -1,8 +1,14 @@
 .header {
   border-bottom: 1px solid getColor('header-border-bottom');
 
-  &__nav, &__box {
-    @include centerFlex ($justify-content: space-between);
+  &__box {
+    @include for-tablet {
+      @include centerFlex ($justify-content: flex-start);
+    }
+    @include for-desktop {
+      @include centerFlex ($justify-content: flex-start);
+    }
+    
   }
   
   .current {
@@ -24,11 +30,27 @@
   &__icon {
     margin-right: 10px;
   }
+  
+  &__item-mail {
+    margin: 0;
+
+    @include for-tablet {
+      margin-bottom: 10px;
+    }
+    @include for-desktop {
+      margin-bottom: 0px;
+    }
+  }
+  
 }
 
 .nav {
-  @include centerColumnFlex;
+  display: none;
   gap: 50px;
+
+  @include for-tablet {
+    @include centerColumnFlex;
+  }
 
   .link {
     position: relative;
@@ -48,21 +70,48 @@
 }
 
 .contacts {
-  @include centerColumnFlex;
+  display: none;
   gap: 50px;
-  
+
+  @include for-tablet {
+      display: block;
+    }
+
+  @include for-desktop {
+    @include centerColumnFlex;
+  }
+
   .link {
     @include centerColumnFlex;
     color: inherit;
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     text-decoration: none;
     fill: currentColor;
     transition: color 250ms $prymary-time-func;
+
+    @include for-desktop {
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+    }
   
     &:hover, &:focus {
       color: getColor('accent-color');
     }
+  }
+}
+
+.navigate {
+
+  &__menu {
+    @include centerFlex ($justify-content: space-between);
+    flex-grow: 1;
+  }
+
+  &__contact, &__mobile{
+    @include centerFlex ($justify-content: space-between);
   }
 }

@@ -1,8 +1,13 @@
 .socialblock {
 
   &__items {
-    display: flex;
+    @include centerFlex;
     gap: 10px;
+
+    @include for-desktop {
+      display: flex;
+
+    }
   }
 
   &__link {

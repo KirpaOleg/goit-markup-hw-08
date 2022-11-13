@@ -17,7 +17,7 @@
 
   &__icon {
     position: absolute;
-    left: 13px;
+    left: 0px;
     width: 16px;
     height: 15px;
     background-color: transparent;
@@ -28,6 +28,10 @@
     margin-right: 8px;
     cursor: pointer;
     transition: background-color 250ms $prymary-time-func;
+
+    @include for-desktop {
+      left: 13px;
+    }
   }
 
   &__contract {

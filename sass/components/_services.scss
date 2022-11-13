@@ -1,8 +1,13 @@
 .services {
+  display: none;
   padding-top: 0px;
 
+  @include for-desktop {
+    display: block;
+  }
+
   &__title {
-    @extend %title
+    @include title
   }
 
   &__list {

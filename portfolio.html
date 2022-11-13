@@ -16,32 +16,48 @@
 <body>
 
   <header class="header">
-    <div class="container header__nav">
+    <div class="container">
       <nav class="header__box">
-        <a href="./index.html" lang="en" class="header__logo link"><span class="logo-accent">Web</span>Studio</a>
-        <ul class="nav list">
-          <li class="header__item"><a href="./index.html" class="link">Студія</a></li>
-          <li class="header__item"><a href="./portfolio.html" class="link current">Портфоліо</a></li>
-          <li class="header__item"><a href="" class="link">Контакти</a></li>
-        </ul>
+        <div class="navigate__mobile">
+          <a href="./index.html" lang="en" class="header__logo link"><span class="logo-accent">Web</span>Studio</a>
+
+          <button class="mobile-menu js-open-menu" type="button">
+            <svg width="40" height="40" aria-label="Мобільне меню">
+              <use href="./images/icons.svg#icon-mobile-menu-open"></use>
+              <use href="./images/icons.svg#icon-mobile-menu-close"></use>
+            </svg>
+          </button>
+
+        </div>
+        <div class="navigate__menu">
+          <div class="navigate__link">
+            <ul class="nav list">
+              <li class="header__item-nav"><a href="./index.html" class="link">Студія</a></li>
+              <li class="header__item-nav"><a href="./portfolio.html" class="link current">Портфоліо</a></li>
+              <li class="header__item-nav"><a href="" class="link">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="navigate__contact">
+            <ul class="contacts list">
+              <li class="header__item-mail">
+                <a href="mailto:info@devstudio.com" lang="en" class="link">
+                  <svg class="header__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com</a>
+              </li>
+              <li class="header__item">
+                <a href="tel:+380961111111" class="header__link link">
+                  <svg class="header__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <ul class="contacts list">
-        <li class="header__item">
-          <a href="mailto:info@devstudio.com" lang="en" class="header__link link">
-            <svg class="header__icon" width="16" height="12">
-              <use href="./images/icons.svg#icon-mail"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
-        <li class="header__item">
-          <a href="tel:+380961111111" class="header__link link">
-            <svg class="header__icon" width="10" height="16">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </li>
-      </ul>
     </div>
   </header>
 
@@ -60,7 +76,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/website-tehnokryak.jpg" alt="ноутбук зі стартовою сторінкою" width="370">
+                <img srcset="
+                  ./images/website-tehnokryak.jpg 370w,
+                  ./images/website-tehnokryak@2x.jpg 740w,
+                  ./images/website-tehnokryak@3x.jpg 1010w,
+                  " src="./images/website-tehnokryak.jpg" alt="ноутбук зі стартовою сторінкою"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -68,7 +89,6 @@
                     особу.</p>
                 </div>
               </div>
-
               <div class="card__title">
                 <h2 class="card__name">Технокряк</h2>
                 <p class="card__link">Веб-сайт</p>
@@ -78,7 +98,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/design-new-orlean.jpg" alt="два баскетболісти з м'ячем" width="370">
+                <img srcset="
+                  ./images/design-new-orlean.jpg 370w,
+                  ./images/design-new-orlean@2x.jpg 740w,
+                  ./images/design-new-orlean@3x.jpg 1010w,
+                  " src="./images/design-new-orlean.jpg" alt="два баскетболісти з м'ячем"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -95,7 +120,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/application-sea-food.jpg" alt="логотип на фоні великої риби" width="370">
+                <img srcset="
+                  ./images/application-sea-food.jpg 370w,
+                  ./images/application-sea-food@2x.jpg 740w,
+                  ./images/application-sea-food@3x.jpg 1010w,
+                  " src="./images/application-sea-food.jpg" alt="логотип на фоні великої риби"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -112,7 +142,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/marketing-prime.jpg" alt="великі навушники" width="370">
+                <img srcset="
+                  ./images/marketing-prime.jpg 370w,
+                  ./images/marketing-prime@2x.jpg 740w,
+                  ./images/marketing-prime@3x.jpg 1010w,
+                  " src="./images/marketing-prime.jpg" alt="великі навушники"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -129,7 +164,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/application-boxes.jpg" alt="дві крафтові коробки" width="370">
+                <img srcset="
+                  ./images/application-boxes.jpg 370w,
+                  ./images/application-boxes@2x.jpg 740w,
+                  ./images/application-boxes@3x.jpg 1010w,
+                  " src="./images/application-boxes.jpg" alt="дві крафтові коробки"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -146,7 +186,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/website-inspiration.jpg" alt="монітор зі стартовою сторінкою" width="370">
+                <img srcset="
+                  ./images/website-inspiration.jpg 370w,
+                  ./images/website-inspiration@2x.jpg 740w,
+                  ./images/website-inspiration@3x.jpg 1010w,
+                  " src="./images/website-inspiration.jpg" alt="монітор зі стартовою сторінкою"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -163,7 +208,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/design-limited-edition.jpg" alt="глянцевий журнал з фото та описом" width="370">
+                <img srcset="
+                  ./images/design-limited-edition.jpg 370w,
+                  ./images/design-limited-edition@2x.jpg 740w,
+                  ./images/design-limited-edition@3x.jpg 1010w,
+                  " src="./images/design-limited-edition.jpg" alt="глянцевий журнал з фото та описом"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -180,7 +230,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/marketing-lab.jpg" alt="бірка з написом проєкту" width="370">
+                <img srcset="
+                  ./images/marketing-lab.jpg 370w,
+                  ./images/marketing-lab@2x.jpg 740w,
+                  ./images/marketing-lab@3x.jpg 1010w,
+                  " src="./images/marketing-lab.jpg" alt="бірка з написом проєкту"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -197,7 +252,12 @@
           <li class="card__list">
             <a href="" class="overley link">
               <div class="card__block">
-                <img src="./images/application-business.jpg" alt="ноутбук зі стартовою сторінкою" width="370">
+                <img srcset="
+                  ./images/application-business.jpg 370w,
+                  ./images/application-business@2x.jpg 740w,
+                  ./images/application-business@3x.jpg 1010w,
+                  " src="./images/application-business.jpg" alt="ноутбук зі стартовою сторінкою"
+                  sizes="(min-width: 1200px) 30vw, (min-width: 768px) 60vw, 100vw" />
                 <div class="overley__box">
                   <p class="overley__text">Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -218,57 +278,59 @@
 
   <footer class="footer">
     <div class="container footer__box">
-      <div class="footer__adressblok">
-        <a href="./index.html" lang="en" class="footer__logo link"><span class="logo-accent">Web</span>Studio</a>
-        <address class="adressblok">
-          <ul class="adressblok__contacts list">
-            <li class="adressblok__item">
-              <a class="adressblok__adress link" href="https://goo.gl/maps/2sXjkp3v6WPnK2FJ7" target="_blank"
-                rel="noopener noreferrer nofollow">
-                м. Київ, пр-т Лесі Українки, 26
+      <div class="footer__info">
+        <div class="footer__adressblok">
+          <a href="./index.html" lang="en" class="footer__logo link"><span class="logo-accent">Web</span>Studio</a>
+          <address class="adressblok">
+            <ul class="adressblok__contacts list">
+              <li class="adressblok__item">
+                <a class="adressblok__adress link" href="https://goo.gl/maps/2sXjkp3v6WPnK2FJ7" target="_blank"
+                  rel="noopener noreferrer nofollow">
+                  м. Київ, пр-т Лесі Українки, 26
+                </a>
+              </li>
+              <li class="adressblok__item"><a class="adressblok__contact link" href="mailto:info@devstudio.com"
+                  lang="en">info@devstudio.com</a>
+              </li>
+              <li class="adressblok__item"><a class="adressblok__contact link" href="tel:+380961111111">+38 096 111 11
+                  11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer__socialblock">
+          <p class="footer__titel">приєднуйтесь</p>
+          <ul class="socialblock__items list">
+            <li class="socialblock__item">
+              <a href="" class="socialblock__link link">
+                <svg class="socialblock__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
-            <li class="adressblok__item"><a class="adressblok__contact link" href="mailto:info@devstudio.com"
-                lang="en">info@devstudio.com</a>
+            <li class="socialblock__item">
+              <a href="" class="socialblock__link link">
+                <svg class="socialblock__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li class="adressblok__item"><a class="adressblok__contact link" href="tel:+380961111111">+38 096 111 11
-                11</a>
+            <li class="socialblock__item">
+              <a href="" class="socialblock__link link">
+                <svg class="socialblock__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socialblock__item">
+              <a href="" class="socialblock__link link">
+                <svg class="socialblock__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin2"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
-      </div>
-      <div class="footer__socialblock">
-        <p class="footer__titel">приєднуйтесь</p>
-        <ul class="socialblock__items list">
-          <li class="socialblock__item">
-            <a href="" class="socialblock__link link">
-              <svg class="socialblock__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socialblock__item">
-            <a href="" class="socialblock__link link">
-              <svg class="socialblock__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socialblock__item">
-            <a href="" class="socialblock__link link">
-              <svg class="socialblock__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socialblock__item">
-            <a href="" class="socialblock__link link">
-              <svg class="socialblock__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin2"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
       <div class="footer__subscribe">
         <p class="footer__titel">Підпишіться на розсилку</p>

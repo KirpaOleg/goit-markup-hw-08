@@ -4,11 +4,55 @@
   padding-bottom: 60px;
 
   &__box {
-    @include centerColumnFlex ($align-items: baseline);
+
+    @include for-desktop {
+      @include centerColumnFlex ($align-items: baseline);
+    }
+  }
+
+  &__info {
+    display: block;
+
+    @include for-tablet {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      margin-bottom: 60px;
+
+    }
+
+    @include for-desktop {
+      @include centerColumnFlex ($align-items: baseline);
+    }
+  }
+
+  &__adressblok {
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include for-tablet {
+      margin: 0px;
+    }
+
+    @include for-desktop {
+      text-align: start;
+      width: max-content;
+    }
   }
 
   &__socialblock {
-    margin-left: 70px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include for-tablet {
+      margin: 0px;
+    }
+
+    @include for-desktop {
+        margin-left: 70px;
+        text-align: start;
+      }
   }
 
   &__titel {
@@ -18,10 +62,18 @@
     text-transform: uppercase;
     color: getColor('white-text-color');
     margin-bottom: 20px;
+
+    @include for-desktop {
+      text-align: start;
+    }
   }
 
   &__subscribe {
-    margin-left: 93px;
+    text-align: center;
+        
+    @include for-desktop {
+      margin-left: 93px;
+    }
   }
 
   .adressblok__adress {
