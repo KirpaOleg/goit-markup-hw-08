@@ -1,5 +1,4 @@
 .mobile {
-  position: relative;
 
   &__menu {
     background: none;
@@ -12,23 +11,32 @@
     height: 40px;
     cursor: pointer;
 
-    &.is-open .mobile__icon-open {
-      display: none;
-    }
-
-    &.is-open .mobile__icon-close {
-      display: block;
-    }
   }
 
   &__container {
-    position: absolute;
+    @include is-hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
     outline: 1px solid red;
-    background-color: aquamarine;
-    padding: 40px;
+    background-color: rgb(252, 253, 253);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms $prymary-time-func,
+      opacity 250ms $prymary-time-func,
+      visibility 250ms $prymary-time-func;
 
     @include for-tablet {
       display: none;
+    }
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+      transform: translateX(0%);
     }
   }
 
@@ -39,8 +47,22 @@
     }
   }
 
-  &__icon-close {
-    display: none;
+  &__container-block {
+    position: relative;
+    max-width: 480px;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+
+    .mobile__menu {
+      position: absolute;
+      top: 13px;
+      right: 15px;
+      transition: transform 250ms $prymary-time-func;
+    }
   }
 
   &__nav {
@@ -49,7 +71,7 @@
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: getColor('secondary-text-color');
-    margin-bottom: 302px;
+    margin-bottom: auto;
   }
 
   &__item-nav:not(:last-child) {

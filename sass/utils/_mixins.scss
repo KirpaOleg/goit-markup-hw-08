@@ -101,6 +101,7 @@
   opacity: 1;
   background-color: getColor('backdrop-background-color');
   transition: opacity 250ms $prymary-time-func;
+  overflow-y: scroll;
 }
 
 @mixin is-hidden {

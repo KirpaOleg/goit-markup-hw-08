@@ -23,6 +23,7 @@
 
     @include for-desktop {
       @include centerColumnFlex ($align-items: baseline);
+      margin-bottom: 0;
     }
   }
 
