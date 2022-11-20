@@ -12,13 +12,12 @@
     gap: 30px;
     
     @include for-tablet {
-        @include wrapFlex;
+      @include wrapFlex;
     }
 
     @include for-desktop {
       @include centerRowFlex ($justify-content: space-between);
     }
-    
   }
 
   &__item {
@@ -29,8 +28,8 @@
     }
 
     @include for-desktop {
-        width: calc((100% - 90px)/4);
-      }
+      width: calc((100% - 90px)/4);
+    }
   }
 
   &__title {
